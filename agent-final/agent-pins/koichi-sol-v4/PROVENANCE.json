@@ -1,0 +1,41 @@
+{
+  "source": "agent-final/agent-pins/koichi-sol-v3",
+  "source_commit": "a7e1e569f1018792c651ade2927c7170828129cd",
+  "runtime_commit": "f2fa847014435527a24a91cd19babb03d7c314da",
+  "record_workspace": "agent-final",
+  "copy": "koichi-sol-v4",
+  "copied_from": "koichi-sol-v3",
+  "provider_entrypoint": "agent_koichi.adapter",
+  "local_changes": "Clean committed v3 copy excluding environments, caches, private state, logs and data. Exact v4 adapter/test/README identity. Narrow seer disclosure factual correction and generic counterclaim, bussing, repetition and coordination advice. Current provider completed-item stream reconstruction frozen with providers/freeze.py; provider source not modified. Default hard strategy and planner_enabled=false unchanged; authorized knowledge boundaries unchanged.",
+  "operator_policy": "No provider source changes, source commits, live calls or games; parent owns launcher and commits.",
+  "installed_verification": {
+    "status": "passed installed closure, adapter and provider startup gates in own locked offline environment",
+    "installation_command": "UV_CACHE_DIR=<v4>/.uv-cache UV_PYTHON_DOWNLOADS=never uv sync --project <v4> --locked --offline --link-mode copy",
+    "installed_packages": 25,
+    "dependency_check": "uv pip check: all 25 installed packages compatible",
+    "initial_full_suite": {"passed": 3878, "failed": 81, "seconds": 50.14, "failure_reason": "Copied provider fixture paths and metadata still referenced v3; corrected all three references in test_provider_copy.py."},
+    "post_correction_gate": {"passed": 152, "failed": 0, "seconds": 2.17, "files": ["test_provider_copy.py", "test_adapter.py", "test_installed_closure.py", "test_prompt_v4.py"]},
+    "full_suite_after_correction": "Not rerun to meet 15:42Z handoff; all 81 initial failures belong to the corrected provider test file, which passed in the 152-test rerun.",
+    "environment": "Own interpreter -I -B outside source tree; plugin autoload disabled; warnings errors; socket connect, DNS and sendto blocked; temporary paths inside v4.",
+    "scope": "API-free tests only; no live calls, matches or commits. Inherited v3 results not attributed to v4."
+  },
+  "source_path": "agent-final/agent-pins/koichi-sol-v3",
+  "runtime_path": "vendor/werewolf-runtime",
+  "connector_path": "vendor/final-providers",
+  "connector_snapshot": {
+    "sha256": "59134b8b1d58b9ae4718934af3377d9f74592d91621b970c33f0d8071c95829d",
+    "files": {
+      "pyproject.toml": "782c135128d120e1d95c7b23b13fac9ed6e4299de71ecda4dbc73b5c20b62b70",
+      "uv.lock": "8b9b5e022ba91ae039e1e6f76825f424a1ac873b8f178cf8d7a4c3f2121a31ff",
+      "src/final_providers/__init__.py": "1580881441c951465d489181a99df0cc4fb9dc4214bcd73feffdec52993bdfb3",
+      "src/final_providers/__main__.py": "db58ca8c66ed4b223569414dafafaaabcac6f0907e4851e9890f8ad0e5e1dfa3",
+      "src/final_providers/auth.py": "c718095e8fbc1ac3979a2cd1dae6825e5313938a0ef2450f4962feae7c23de76",
+      "src/final_providers/cli.py": "a8fc564e3fc5d467de532a927baafe54e7afe7790e1045b778151e441db0f315",
+      "src/final_providers/errors.py": "b5c02f4981814b85eb4812aa6ef356e442b88567f457bc29c65cc049312a97a9",
+      "src/final_providers/factory.py": "6600d6cc54806dfade795199aa37d617f1e471ef3474c3c829cb63e365eb48a4",
+      "src/final_providers/inference.py": "ca57b30bda49b61b3afc1a783c3c8bdf37c1612c49d026a8c1715af37f8e1e9d",
+      "README.md": "eaf0fb806d0e12df679b8c3980139193e9b94701d26d34410aae387540525ed1"
+    }
+  },
+  "lock_status": "copy-local uv.lock; verify with uv sync --locked"
+}

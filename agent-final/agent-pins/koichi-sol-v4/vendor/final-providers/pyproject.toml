@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "final-providers"
+version = "0.1.0"
+description = "Final-owned explicit ChatGPT OAuth and OpenRouter routes"
+requires-python = ">=3.14"
+dependencies = [
+  "httpx==0.28.1",
+  "PyJWT[crypto]==2.10.1",
+  "jsonschema==4.25.1",
+]
+
+[project.scripts]
+final-provider = "final_providers.cli:main"
+
+[dependency-groups]
+dev = ["pytest==9.1.1", "pytest-asyncio==1.3.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py314"

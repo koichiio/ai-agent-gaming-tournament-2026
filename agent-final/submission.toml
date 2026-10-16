@@ -1,0 +1,23 @@
+[config]
+strategy = "hard"
+planner_enabled = false
+max_chats = 2
+extraction_budget_policy = "policy_reserve"
+model = "gpt-6.1-sol"
+output_limit_policy = "omit_unsupported"
+use_provider_default_effort = true
+
+[config.provider_config]
+route = "chatgpt"
+auth_mode = "oauth"
+model = "gpt-6.1-sol"
+focal = true
+require_fast = false
+credential_source = ".private/chatgpt"
+account = "main"
+
+[experiment]
+experiment_id = "final-sol-v4-submission-20261016"
+baseline_version = ""
+changes = "Final koichi-sol-v4 with owner-level tournament supervision, hard strategy, planner disabled, and two chats."
+hypothesis = "Use the selected Sol candidate with owner-local records and tournament-only assignment routing."
