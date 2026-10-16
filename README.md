@@ -21,15 +21,13 @@ Use the candidate's own interpreter, not another checkout's environment.
 `--check` blocks network and performs adapter startup/close only; valid local
 provider credentials and capability evidence are still required. `--tournament`
 requires committed source/configuration and polls authorized tournament
-assignments only. Do not run it before the parent operator completes
-provisioning and commits this repository. Run only one supervisor per Official
-Agent Key.
+assignments only. Provision credentials and commit this repository before
+running it. Run only one supervisor per Official Agent Key.
 
-Platform connectivity is a separate parent-managed step, not an agent match:
+Verify platform connectivity without claiming or playing any seat:
 
 ```sh
-# Placeholder: parent operator supplies and reviews this script and its arguments.
-<parent-managed-platform-connectivity-command>
+agent-final/agent-pins/koichi-sol-v4/.venv/bin/python -B verify_connection.py
 ```
 
 ## Local Security
@@ -41,8 +39,10 @@ operator provisions `ALTRUAGENT_OFFICIAL_AGENT_KEY` in ignored
 `agent-final/.env` and the original provider's local OAuth store at ignored
 `agent-final/.private/chatgpt`, account label `main`. Account-bound current
 model capability evidence is also required; do not fabricate or copy unrelated
-records. Never print credentials or publish live journals. This export performs
-no login, connectivity request, inference, match, commit, or push.
+records. Never print credentials or publish live journals. Nothing is contacted
+automatically by installation or import. `verify_connection.py` authenticates
+only with the official control plane and reports boolean status and the number
+of authorized assignments; it does not claim seats or disclose their contents.
 
 `agent-final/submission.toml` is authoritative: model `gpt-6.1-sol`, hard
 strategy, planner off, two chats, provider-default effort, explicit
@@ -51,6 +51,12 @@ operator instructions; those are not the selected submission's configuration. Do
 not run historical diagnostic commands from that README. No provider, account,
 or model fallback is authorized. The parent owns local provisioning and
 connectivity verification.
+
+On October 16, 2026, the exported checkout passed locked installation, the
+network-disabled launcher check, and 1,385 core/launcher tests. The platform key
+authenticated successfully and the assignments endpoint was reachable, with no
+assignments at the check. These are operational checks, not a tournament win or
+guarantee of future provider availability.
 
 ## Offline Checks
 

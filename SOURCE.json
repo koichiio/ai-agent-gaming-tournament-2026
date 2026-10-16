@@ -74,7 +74,8 @@
     ".gitignore",
     "agent-final/.gitignore",
     "agent-final/agent-pins/koichi-sol-v4/README.md",
-    "SOURCE.json"
+    "SOURCE.json",
+    "verify_connection.py"
   ],
   "omitted_tests": {
     "test_assertions.py": "Imports test_ledger.py, outside the requested test allowlist.",
